@@ -1,0 +1,23 @@
+#include<stdio.h>
+void show(char *p)
+{
+	int a=0;
+	while(*p!='\0')
+	{
+		printf("%c\n",*p);
+		if((*p>='A' && *p<='Z') || (*p>='a' && *p<='z'))
+		a++;
+		
+		p++;
+	}
+	printf("Total alphabets = %d\n",a);
+}
+int main()
+{
+	char n[20];
+	printf("Enter any string ");
+	//scanf("%s",n);
+	gets(n);
+	show(n); //show(&n[0]);
+	return 0;
+}
