@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a[10][10],i,j,r,c,s=0;
+	//input of rows and cols
+	printf("Enter total rows and cols ");
+	scanf("%d %d",&r,&c);
+	//condition
+	if(r==c)
+	printf("Sum of diagonal elements can be calculated\n");
+	else
+	{
+		printf("Sum of diagonal elements cannot be calculated\n");
+		exit(1);
+	}
+	//input of elements
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			printf("Enter [%d][%d] element ",i,j);
+			scanf("%d",&a[i][j]);
+		}
+	}
+	//display 
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			printf("%d ",a[i][j]);
+			if(i==j)
+			s=s+a[i][j];
+		}
+		printf("\n");
+	}
+	printf("Sum of right diagonal elements = %d\n",s);
+	return 0;
+}
