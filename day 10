@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<conio.h>
+struct student
+{
+  int roll;
+  char name[20];
+  float per;
+};
+void show(struct student n);
+float calavg(struct student n1,struct student n2);
+int main()
+{
+  struct student s1,s2;
+  float a;
+  printf("Enter roll,name and per of 1st student ");
+  scanf("%d %s %f",&s1.roll,s1.name,&s1.per);
+  printf("Enter roll,name and per of 2nd student ");
+  scanf("%d %s %f",&s2.roll,s2.name,&s2.per);
+  show(s1);
+  show(s2);
+  a=calavg(s1,s2);
+  printf("average per %f\n",a);
+  getch();
+  return(0);
+}
+void show(struct student n)
+{
+  printf("roll %d  name %s  per %f\n",n.roll,n.name,n.per);
+}
+float calavg(struct student n1,struct student n2)
+{
+  return((n1.per+n2.per)/2);
+}
