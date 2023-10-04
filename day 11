@@ -1,0 +1,18 @@
+//enum.cpp
+#include<stdio.h>
+int main()
+{
+  enum color{red,blue,green,hello,hi};//1
+ //enum color{red,blue=2,green,hello=-9,hi};//2
+  //enum color{red=-3,blue,green=8,hello,hi};//3
+  //enum color{red,blue=-2,green,hello,hi};//4
+  //enum color{red,blue=89,green=-3,hello=89,hi};//5
+  color r,g,b,a1,a2;
+  r=red;
+  g=green;
+  b=blue;
+  a1=hello;
+  a2=hi;
+  printf("red %d blue %d green %d  hello %d  hi %d\n",r,b,g,a1,a2);
+	return(0);
+}
