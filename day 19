@@ -1,0 +1,28 @@
+//Q9
+#include<stdio.h>
+int main()
+{
+	int a[5],i,p=0,s=0;
+	float av;
+	//input
+	for(i=0;i<5;i++)
+	{
+		printf("Enter a[%d] element ",i);
+		scanf("%d",&a[i]);
+	}
+	//display
+	for(i=0;i<5;i++)
+	{
+		printf("%d\n",a[i]);
+		if(a[i]>0)
+		{
+			p++;
+			s=s+a[i];
+		}
+	}
+	av=(float)s/p;
+	printf("Total +ve elements = %d\n",p);
+	printf("Sum of all +ve elements = %d\n",s);
+	printf("Average of all +ve elements = %f\n",av);
+	return 0;
+}
