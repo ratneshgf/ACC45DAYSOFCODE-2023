@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+union student2
+{
+	int roll;
+	char name[20];
+	float age;
+}s2;
+int main()
+{
+	//union student2 s2;
+	printf("Enter roll ");
+	scanf("%d",&s2.roll);
+	printf("Enter name ");
+	scanf("%s",s2.name);
+	printf("Enter age ");
+	scanf("%f",&s2.age);
+	printf("Roll number %d\n",s2.roll);
+	printf("Name %s\n",s2.name);
+	printf("Age %f\n",s2.age);
+	getch();
+	return(0);
+}
