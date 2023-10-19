@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	char n[20];
+	puts("Enter any string ");
+	gets(n);
+	puts("String is ");
+	puts(n);
+	
+	printf("String is %s\n",n);
+	getch();
+	return 0;
+}
