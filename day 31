@@ -1,0 +1,18 @@
+/*
+character is a graphical character  or not
+*/
+
+#include<stdio.h>
+#include<conio.h>
+#include<ctype.h>
+int main()
+{
+  char ch='a';
+  //char ch='\n';
+  if(isgraph(ch))
+  printf("it is a graphical character");
+  else
+  printf("it is not a graphical character");
+  getch();
+  return 0;
+}
