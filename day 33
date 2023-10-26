@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<conio.h>
+struct employee
+{
+  int empno;
+  char name[20];
+  float bsal;
+  struct benefit
+  {
+    float hra,da,ta,cca;
+  }b;
+  struct deduction
+  {
+    float pf,it;
+  }d;
+  float net;
+}e;
+int main()
+{
+  printf("Enter empno,name and basic salary ");
+  scanf("%d %s %f",&e.empno,e.name,&e.bsal);
+  //to cal benefit
+  e.b.hra=.15*e.bsal;
+  e.b.da=.98*e.bsal;
+  e.b.cca=.14*e.bsal;
+  e.b.ta=.15*e.bsal;
+  //to cal deduction
+  e.d.pf=.10*e.bsal;
+  e.d.it=.10*e.bsal;
+  //to cal net sal
+  e.net=e.bsal+e.b.hra+e.b.ta+e.b.da+e.b.cca-e.d.pf-e.d.it;
+  printf("Net salary = %f\n",e.net);
+  getch();
+  return(0);
+}
