@@ -1,0 +1,81 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int a[10][10],b[10][10],c[10][10],i,j,r1,c1,r2,c2,k;
+	//input of rows and cols
+	printf("Enter total rows and cols in 1st matrix ");
+	scanf("%d %d",&r1,&c1);
+	printf("Enter total rows and cols in 2nd matrix ");
+	scanf("%d %d",&r2,&c2);
+	//condition
+	if(c1==r2)
+	printf("Product can be calculated\n");
+	else
+	{
+		printf("Product cannot be calculated\n");
+		exit(1);
+	}
+	//input of elements
+	printf("Enter elements of 1st matrix\n");
+	for(i=0;i<r1;i++)
+	{
+		for(j=0;j<c1;j++)
+		{
+			printf("Enter [%d][%d] element ",i,j);
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("Enter elements of 2nd matrix\n");
+	for(i=0;i<r2;i++)
+	{
+		for(j=0;j<c2;j++)
+		{
+			printf("Enter [%d][%d] element ",i,j);
+			scanf("%d",&b[i][j]);
+		}
+	}
+	//display 
+	printf("1st Matrix\n");
+	for(i=0;i<r1;i++)
+	{
+		for(j=0;j<c1;j++)
+		{
+			printf("%d ",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("2nd Matrix\n");
+	for(i=0;i<r2;i++)
+	{
+		for(j=0;j<c2;j++)
+		{
+			printf("%d ",b[i][j]);
+		}
+		printf("\n");
+	}
+	//to calculate product matrix
+	for(i=0;i<r1;i++)
+	{
+		for(j=0;j<c2;j++)
+		{
+			c[i][j]=0;
+			for(k=0;k<c1;k++)
+			{
+				c[i][j]=c[i][j]+a[i][k]*b[k][j];
+				
+			}
+		}
+	}
+	printf("Product Matrix\n");
+	for(i=0;i<r1;i++)
+	{
+		for(j=0;j<c2;j++)
+		{
+			printf("%d ",c[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+	
+}
