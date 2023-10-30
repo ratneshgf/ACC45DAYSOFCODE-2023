@@ -1,0 +1,86 @@
+//no pass and no return
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+//function definition
+void square()
+{
+	int a,b;
+	printf("Enter any no ");
+	scanf("%d",&a);
+	b=a*a;
+	printf("square = %d\n",b);
+}
+void max3()
+{
+	int a,b,c,d;
+	printf("Enter 3 nos ");
+	scanf("%d %d %d",&a,&b,&c);
+	if(a>b && a>c)
+	d=a;
+	else if(b>c)
+	d=b;
+	else
+	d=c;
+	printf("Max no = %d\n",d);
+}
+void sum()
+{
+	int a,b,c;
+	printf("Enter 2 nos ");
+	scanf("%d %d",&a,&b);
+	c=a+b;
+	printf("sum = %d\n",c);
+}
+void table()
+{
+	int i,n,t;
+	printf("Enter any no ");
+	scanf("%d",&n);
+	for(i=1;i<=10;i++)
+	{
+		t=n*i;
+		printf("%d * %d = %d\n",n,i,t);
+	}
+}
+int main()
+{
+	int op=0;
+	while(op!=5)
+	{
+		system("cls"); //to clear the screen header file : stdlib.h
+		printf("\n\n\t\t Main menu\n");
+		printf("\t\t   ========\n\n\n");
+		printf("\t\t1. Square of a no\n\n");
+		printf("\t\t2. Sum of 2 nos\n\n");
+		printf("\t\t3. Max of 3 nos\n\n");
+		printf("\t\t4. Table of a no\n\n");
+		printf("\t\t5. Exit\n\n");
+		printf("\t\tEnter your choice ");
+		scanf("%d",&op);
+		system("cls");
+		switch(op)
+		{
+			case 1:
+				square();
+				break;
+			case 2:
+				sum();
+				break;
+			case 3:
+				max3();
+				break;
+			case 4:
+				table();
+				break;
+			case 5:
+				printf("End of the program\n");
+				break;
+			default:
+				printf("Invalid choice\n");
+				break;
+		}//switch
+		getch();
+	}//while
+	return 0;
+}//main
