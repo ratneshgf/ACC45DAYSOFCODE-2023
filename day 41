@@ -1,0 +1,17 @@
+#include<stdio.h>
+//function declarition
+void check_digit(char ch)
+{
+	if(ch>='0' && ch<='9')
+	printf("it is a digit");
+	else
+	printf("it is not a digit");	
+}
+int main()
+{
+	char ch;
+	printf("enter any digit");
+	scanf("%c",&ch);
+	check_digit(ch);
+	return 0;
+}
