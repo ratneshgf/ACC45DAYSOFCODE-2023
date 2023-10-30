@@ -1,0 +1,41 @@
+/*
+WAP to take input for 2 numbers and an operator (+,-,*,/). 
+Based on the entered operator calculate and display the result.
+*/
+#include<stdio.h>
+int main()
+{
+	float a,b,c;
+	char op;
+	printf("Enter 2 nos ");
+	scanf("%f %f",&a,&b);
+	printf("Enter operator (+,-,*,/) ");
+	fflush(stdin);
+	op=getchar(); //scanf("%c",&op);
+	switch(op)
+	{
+		case '+':
+			c=a+b;
+			printf("Sum = %f\n",c);
+			break;
+		case '*':
+			c=a*b;
+			printf("Prod = %f\n",c);
+			break;
+		case '-':
+			if(a>b)
+			c=a-b;
+			else
+			c=b-a;
+			printf("Diff = %f\n",c);
+			break;
+		case '/':
+			c=a/b;
+			printf("Div = %f\n",c);
+			break;
+		default:
+			printf("Invalid operator\n");
+			break;
+	}//switch
+	return 0;
+}//main
