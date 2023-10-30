@@ -1,0 +1,72 @@
+//pass and no return
+/*
+WAP for the following:
+1. Area of square
+2. Perimeter of square
+3. Area of circle
+4. Max of 3 nos
+5. Table of a no
+6. Factorial of a no
+7. Exit
+*/
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+//function definition
+void area_square(int s)
+{
+	printf("Area of square = %d\n",s*s);
+}
+void area_rectangle(int l,int b)
+{
+	printf("Area of rectangle = %d\n",l*b);
+}
+void area_circle(float r)
+{
+	float ar;
+	ar=3.1415*r*r;
+	printf("area of circle = %f\n",ar);
+}
+int main()
+{
+	int op=0,a,b,c;
+	float r;
+	while(op!=7)
+	{
+		system("cls"); //to clear the screen
+		printf("1. Area of square\n");
+		printf("2. Area of rectangle\n");
+		printf("3. Area of circle\n");
+		printf("4. Max of 3 nos\n");
+		printf("5. Table of a no\n");
+		printf("6. Factorial of a no\n");
+		printf("7. Exit\n");
+		printf("Enter your choice ");
+		scanf("%d",&op);
+		switch(op)
+		{
+			case 1:
+				printf("Enter side of square ");
+				scanf("%d",&a);
+				area_square(a);
+				break;
+			case 2:
+				printf("Enter length and width of rectangle ");
+				scanf("%d %d",&a,&b);
+				area_rectangle(a,b);
+				break;
+			case 3:
+				printf("Enter radius of circle ");
+				scanf("%f",&r);
+				area_circle(r);
+				break;
+			case 7:
+				printf("End of program\n");
+				break;
+			default:
+				printf("Invalid choice\n");
+		}//switch
+		getch();
+	}//while
+	return 0;
+}//main
