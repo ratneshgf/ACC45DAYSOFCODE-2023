@@ -1,0 +1,21 @@
+//pass and return
+#include<stdio.h>
+//function definition
+int square(int n)
+{
+	return(n*n);
+}
+int cube(int n)
+{
+	return(n*n*n);
+}
+int main()
+{
+	int a,b,c;
+	printf("Enter any no ");
+	scanf("%d",&a);
+	b=square(a);
+	c=cube(a);
+	printf("Square = %d Cube = %d\n",b,c);
+	return 0;
+}
