@@ -1,0 +1,160 @@
+//wap for following?
+//main menu
+//1.cube of a no.
+//2.product of 2 nos.
+//3.minimum of 3 nos.
+//4.factorial of a no.
+//5.area of square.
+//6.area of rectangle.
+//7.area of circle.
+//8.average of 4 nos.
+//9.character is alphabet or not.
+//10.exit.
+
+//no pass and no return 
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+//function defination
+void cube()
+{
+    int a,b;
+	printf("enter any no.");
+	scanf("%d",&a);
+	b=a*a*a;
+	printf("cube=%d\n",b);
+}
+void min3()
+{
+	int a,b,c,d;
+	printf("enter 3 nos");
+	scanf("%d %d %d",&a,&b,&c);
+	if(a<b && a<c)
+	d=a;
+	else if(b<c)
+	d=b;
+	else
+	d=c;
+	printf("min no=%d\n",d);
+}
+void prod()
+{
+	int a,b,c;
+	printf("enter 2 nos");
+	scanf("%d %d",&a,&b);
+	c=a*b;
+	printf("prod=%d\n",c);
+}
+void factorial()
+{
+	int i,n,f=1;
+	printf("enter any no.");
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		f=f*i;
+    }
+    printf("fact=%d\n",f); 
+}
+void square()
+{
+	int s,a;
+	printf("enter area of square");
+	scanf("%d",&s);
+	a=s*s;
+	printf("area=%d\n",a);
+}
+void rectangle()
+{
+	int l,b,a;
+	printf("enter length and breath of rectangle");
+	scanf("%d %d",&l,&b);
+	a=l*b;
+	printf("area of rectangle=%d\n",a);
+}
+void circle()
+{
+	float r,a;
+	printf("enter the radias of circle");
+	scanf("%f",&r);
+	a=3.1415*r*r;
+	printf("area of circle=%f",a);
+}
+void average()
+{
+	int a,b,c,d,av;
+	printf("enter four no.");
+	scanf("%d %d %d %d",&a,&b,&c,&d);
+	av=float(a+b+c+d)/4;
+	printf("average=%d\n",av);
+}
+void character()
+{
+	char ch;
+	printf ("enter any character");
+	scanf("%c",&ch);
+	if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+	printf("it is a character");
+	else
+	printf("it is not a character");
+}
+    int main() 
+{
+    int op=0;
+    while(op!=5)
+    {
+    	system("cls");
+    	printf("\n\n main menu\n");
+    	printf("\t\t 1.cube of a no.\n\n");
+    	printf("\t\t 2.min of 3 nos \n\n");
+    	printf("\t\t 3.prod of 2 nos \n\n");
+    	printf("\t\t 4.factorial nos \n\n");
+    	printf("\t\t 5.side of square\n\n");
+    	printf("\t\t 6.area of rectangle\n\n");
+    	printf("\t\t 7.area of circle \n\n");
+    	printf("\t\t 8.average \n\n");
+    	printf("\t\t 9.character \n\n");
+    	printf("\t\t 10.exit \n\n");
+    	printf("\t\t enter your chioice \n\n");
+    	scanf("%d",&op);
+    	system("cls");
+    	switch(op)
+    	{
+    		case 1:
+    			cube();
+    			break;
+    		case 2:
+    			min3();
+    			break;
+    		case 3:
+    			prod();
+    			break;
+    		case 4:
+    			factorial();
+    			break;
+    		case 5:
+    			square();
+    			break;
+    		case 6:
+    			rectangle();
+    			break;
+    		case 7:
+    			circle();
+    			break;
+    		case 8:
+    			average();
+    			break;
+    		case 9:
+    			character();
+    			break;
+    		case 10:
+    			printf("end of the program\n");
+    			break;
+    		default:
+    			printf("invalid choice\n");
+    			break;
+		}//switch
+		getch();
+	}//while
+    return 0;
+}//main
