@@ -1,0 +1,32 @@
+//Q15
+#include<stdio.h>
+int main()
+{
+	int a[5],i,ma,mi,d;
+	//input
+	for(i=0;i<5;i++)
+	{
+		printf("Enter a[%d] element ",i);
+		scanf("%d",&a[i]);
+	}
+	//display
+	for(i=0;i<5;i++)
+	{
+		printf("%d\n",a[i]);
+		if(i==0)
+		{
+			ma=a[i];
+			mi=a[i];
+		}
+		//max no
+		if(a[i]>ma)
+		ma=a[i];
+		//min no
+		if(a[i]<mi)
+		mi=a[i];
+	}
+	//diff
+	d=ma-mi;
+	printf("max element = %d  min no = %d  diff = %d\n",ma,mi,d);
+	return 0;
+}
